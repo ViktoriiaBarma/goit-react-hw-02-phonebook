@@ -6,14 +6,14 @@ import PropTypes from "prop-types";
 export const ContactList = ({ contacts, deleteContact }) => {
   return (
     <List>
-      {contacts.map((elem) => {
+      {contacts.map(elem => {
         const liId = nanoid();
         return (
-          <Item  key={liId} id={liId}>
+          <Item key={liId} id={liId}>
             <span>
               {elem.name}: <span>{elem.number}</span>
-            </span>  
-<Btn onClick={() => deleteContact(elem.id)}>delete</Btn>
+            </span>
+            <Btn onClick={() => deleteContact(elem.id)}>delete</Btn>
           </Item>
         );
       })}

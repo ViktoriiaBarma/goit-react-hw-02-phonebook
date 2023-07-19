@@ -1,39 +1,38 @@
-
-import React, { Component } from "react";
-import { nanoid } from "nanoid";
+import React, { Component } from 'react';
+import { nanoid } from 'nanoid';
 import {
   Form,
   FormField,
   FieldFormik,
   StyledButton,
 } from './ContactForm.styled';
-import PropTypes from "prop-types";
+//import PropTypes from 'prop-types';
 
 export class ContactForm extends Component {
   state = {
-    name: "",
-    number: "",
+    name: '',
+    number: '',
   };
 
   nameInputId = nanoid();
   numberInputId = nanoid();
 
-  handleChange = (e) => {
+  handleChange = e => {
     this.setState({ [e.currentTarget.name]: e.currentTarget.value });
   };
 
-  handleSubmit = (e) => {
+  handleSubmit = e => {
     e.preventDefault();
 
     const { name, number } = this.state;
     this.props.onAddContact(name, number);
 
-    this.setState({ name: "", number: "" });
+    this.setState({ name: '', number: '' });
   };
 
   render() {
     return (
-      <Form  onSubmit={this.handleSubmit}>
+      <Form onSubmit={this.handleSubmit}>
         <FormField htmlFor={this.nameInputId}>
           Name
           <FieldFormik
@@ -44,7 +43,6 @@ export class ContactForm extends Component {
             onChange={this.handleChange}
             id={this.nameInputId}
           />
-          {/* <ErrorMessage name="name" component="span" /> */}
         </FormField>
 
         <FormField htmlFor={this.numberInputId}>
@@ -57,7 +55,6 @@ export class ContactForm extends Component {
             onChange={this.handleChange}
             id={this.numberInputId}
           />
-          {/* <ErrorMessage name="number" component="span" /> */}
         </FormField>
         <StyledButton type="submit">Add contact</StyledButton>
       </Form>
@@ -65,9 +62,7 @@ export class ContactForm extends Component {
   }
 }
 
-
-
-ContactForm.propTypes = {
-  name: PropTypes.string.isRequired,
-  number: PropTypes.string.isRequired,
-}
+// ContactForm.propTypes = {
+//   name: PropTypes.string.isRequired,
+//   number: PropTypes.string.isRequired,
+// };
