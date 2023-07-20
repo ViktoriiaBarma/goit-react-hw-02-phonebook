@@ -17,7 +17,6 @@ export const FormField = styled.label`
   font-size: 20px;
   max-width: 100%;
   width: 500px;
-  color: rgb(6, 58, 54);
   text-shadow: rgb(255, 255, 255) 0px 1px 1px;
 `;
 

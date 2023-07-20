@@ -62,6 +62,7 @@ export class App extends Component {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
+          backgroundColor: '#c9c4cd',
         }}
       >
         <h1 style={{

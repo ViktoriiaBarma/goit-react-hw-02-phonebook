@@ -15,9 +15,7 @@ export const Item = styled.li`
   -webkit-box-align: center;
   align-items: center;
   gap: 16px;
-  color: rgb(6, 58, 54);
-  text-shadow: rgb(255, 255, 255) 0px 1px 1px;
-  font-size: 14px;
+    font-size: 14px;
 `;
 
 export const Btn = styled.button`
